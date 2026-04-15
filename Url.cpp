@@ -285,10 +285,7 @@ int main() {
         "http://example.com/path%20with%20spaces",
         "ftp://files.safe-server.org"
     };
-    
-    cout << "========================================\n";
-    cout << "NHP URL Safety Checker - Test Report\n";
-    cout << "========================================\n\n";
+
     
     for (const auto& url : testURLs) {
         auto report = checker.checkURL(url);
