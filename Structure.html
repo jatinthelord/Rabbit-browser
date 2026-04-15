@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, device-scale=1.0">
+    <title>NHP Search Engine</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Header with NHP DB Logo -->
+    <div class="top-header">
+        <div class="logo-container" id="nhpLogo">
+            <img src="nhp_logo.png" alt="NHP DB" class="logo">
+            <span class="logo-text">NHP DB</span>
+        </div>
+        <div class="header-buttons">
+            <button id="newTabBtn" class="header-btn">+ New Tab</button>
+            <button id="incognitoBtn" class="header-btn">🕵️ Incognito</button>
+        </div>
+    </div>
+
+    <!-- Tabs Container -->
+    <div class="tabs-container" id="tabsContainer">
+        <div class="tab active" data-tab="1">
+            <span class="tab-title">New Tab</span>
+            <button class="tab-close">×</button>
+        </div>
+    </div>
+
+    <!-- Main Content Area -->
+    <div class="main-content" id="mainContent">
+        <!-- Search Page (Default) -->
+        <div class="search-page active" data-content="1">
+            <div class="search-container">
+                <div class="search-logo">
+                    <h1>NHP Search</h1>
+                </div>
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Search the web..." autocomplete="off">
+                    <button id="searchBtn" class="search-button">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="search-buttons">
+                    <button class="action-btn" id="searchAction">Search</button>
+                    <button class="action-btn" id="luckyBtn">I'm Feeling Lucky</button>
+                </div>
+                <div id="suggestions" class="suggestions hidden"></div>
+            </div>
+        </div>
+
+        <!-- Results Page -->
+        <div class="results-page" data-content="1">
+            <div class="results-header">
+                <div class="results-logo" id="resultsLogo">NHP Search</div>
+                <div class="results-search-box">
+                    <input type="text" id="resultsSearchInput" placeholder="Search...">
+                    <button id="resultsSearchBtn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="results-container" id="resultsContainer">
+                <!-- Results will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- DB Compiler Modal (Shows when NHP DB logo clicked) -->
+    <div class="compiler-modal hidden" id="compilerModal">
+        <div class="compiler-container">
+            <div class="compiler-header">
+                <h2>NHP DB Compiler</h2>
+                <button class="close-compiler" id="closeCompiler">×</button>
+            </div>
+            <div class="compiler-body">
+                <textarea id="dbCodeInput" placeholder="Enter your NHPLang database code here...
+Example:
+Select * From Customers;
+Country + City
+"></textarea>
+                <div class="compiler-actions">
+                    <button id="runDbCode" class="run-btn">▶ Run Code</button>
+                    <button id="clearDbCode" class="clear-btn">Clear</button>
+                </div>
+                <div class="compiler-output">
+                    <h3>Output:</h3>
+                    <pre id="dbOutput">Ready to execute NHPLang queries...</pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Download Manager -->
+    <div class="download-manager hidden" id="downloadManager">
+        <div class="download-header">
+            <h3>Downloads</h3>
+            <button class="minimize-downloads">−</button>
+        </div>
+        <div class="download-list" id="downloadList">
+            <!-- Downloads will appear here -->
+        </div>
+    </div>
+
+    <!-- URL Safety Warning -->
+    <div class="safety-warning hidden" id="safetyWarning">
+        <div class="warning-content">
+            <h2>⚠️ Warning: Unsafe Website</h2>
+            <p id="warningMessage">This URL may be dangerous!</p>
+            <div class="warning-buttons">
+                <button id="goBack" class="warning-btn danger">Go Back</button>
+                <button id="continueAnyway" class="warning-btn">Continue Anyway</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="search_engine.js"></script>
+    <script src="url_checker.js"></script>
+    <script src="download_manager.js"></script>
+</body>
+</html>
