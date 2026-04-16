@@ -1,51 +1,13 @@
-# Node.js
-node_modules/
-logs/
+# NHP lang idk
 
-# npm
-package-lock.json
-npm-debug.log
+cd rabbit-browser
 
-# Yarn
-.yarn-integrity
+# .lilal
 
-# Python
-__pycache__/
-*.py[cod]
-*.pyo
-*.pyd
-venv/
-env/
+git add .
+git commit -m "🐰 Rabbit Browser - NHPLang & T# Support"
 
-# C++
-*.o
-*.gch
-*.out
-*.exe
-*.dll
-
-# C
-*.o
-*.out
-*.exe
-
-# PHP
-vendor/
-*.log
-
-# HTML
-*.html
-
-# CSS
-*.css
-
-# WebAssembly
-*.wasm
-
-# Development files
-.idea/
-.vscode/
-*.sublime-project
-*.sublime-workspace
-.DS_Store
-*.swp
+# idk
+git remote add origin https://github.com/jatinthelord/rabbit-browser.git
+git branch -M main
+git push -u origin main
