@@ -1,0 +1,51 @@
+# Node.js
+node_modules/
+logs/
+
+# npm
+package-lock.json
+npm-debug.log
+
+# Yarn
+.yarn-integrity
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+env/
+
+# C++
+*.o
+*.gch
+*.out
+*.exe
+*.dll
+
+# C
+*.o
+*.out
+*.exe
+
+# PHP
+vendor/
+*.log
+
+# HTML
+*.html
+
+# CSS
+*.css
+
+# WebAssembly
+*.wasm
+
+# Development files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+*.swp
